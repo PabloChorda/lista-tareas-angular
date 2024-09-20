@@ -1,0 +1,11 @@
+<div>
+  <h2>Lista de Tareas</h2>
+  <ul>
+    <li *ngFor="let tarea of listaTareas; let i = index">
+      {{tarea}}
+      <button (click)="eliminarTarea(i)">Eliminar</button>
+    </li>
+    <input type="text" placeholder="Nueva tarea" [(ngModel)] = "nuevaTarea"/>
+    <button (click)="agragarTarea()">Agragar</button>
+  </ul>
+</div>
